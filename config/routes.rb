@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'demo#index'
+
+
   get 'test/index'
   get 'test/action2'
   match 'test/22', :to => 'test#action3',
@@ -6,9 +9,10 @@ Rails.application.routes.draw do
 
   get 'example/index'
 
-  root 'demo#index'
-
   get 'demo/index'
+  get 'demo/hello'
+  get 'demo/other_hello'
+  get 'demo/lynda'
 
   #default route
   # get ':controller(/:action(/:id))'
