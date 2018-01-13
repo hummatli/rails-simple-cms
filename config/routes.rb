@@ -8,6 +8,18 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :pages do
+    member do
+      get :delete
+    end
+  end
+
+  resources :sections do
+    member do
+      get :delete
+    end
+  end
+
   get 'test/index'
   get 'test/action2'
   match 'test/22', :to => 'test#action3',
