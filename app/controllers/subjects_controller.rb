@@ -14,6 +14,7 @@ class SubjectsController < ApplicationController
 
   def create
     @subject = Subject.new(subject_params)
+
     if @subject.save
       redirect_to(subjects_path)
     else
@@ -22,9 +23,17 @@ class SubjectsController < ApplicationController
   end
 
   def edit
+    @subject = Subject.find(params[:id])
   end
 
   def update
+    @subject = Subject.find(params[:id])
+
+    if @subject.update_attributes(subject_params)
+      redirect_to(subject_path(@subject))
+    else
+      render('edit')
+    end
   end
 
   def delete
