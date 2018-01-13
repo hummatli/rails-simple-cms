@@ -2,7 +2,6 @@ class SubjectsController < ApplicationController
 
   def index
     @subjects = Subject.sorted
-    #index default renders index view
   end
 
   def show
@@ -10,6 +9,7 @@ class SubjectsController < ApplicationController
   end
 
   def new
+    @subject = Subject.new
   end
 
   def create
