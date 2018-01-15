@@ -1,10 +1,10 @@
 <% evil_string = "<script>alert('Gotcha!');</script>" %>
 <% good_string = "<strong>Welcome to my site!</strong>" %>
 
-<!-- bu sanitarizationu disable edir -->
+<!-- bu sanitizing-i disable edir -->
 <!-- <%= raw evil_string %><br />
 <%= raw good_string %><br /> -->
 
-<!-- bu sanitarizationu disable edir -->
+<!-- bu sanitizing-i disable edir -->
 <%= evil_string.html_safe %><br />
 <%= good_string.html_safe %><br />

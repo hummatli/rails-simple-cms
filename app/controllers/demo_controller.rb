@@ -1,6 +1,6 @@
 class DemoController < ApplicationController
 
-  layout false
+  layout 'application'
 
   def index
     render('index')
@@ -22,6 +22,6 @@ class DemoController < ApplicationController
   end
 
   def escape_output
-    
+
   end
 end
